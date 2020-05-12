@@ -1,0 +1,36 @@
+#################################### common config : ####################################
+server:
+  port: 8080
+
+spring:
+  application:
+    name: lina
+
+  ## 数据源
+  datasource:
+    name: docker-mysql
+    url:
+    driver-class-name:
+    password:
+    username:
+
+  ## redis
+  redis:
+    host: 123.56.142.9
+    port: 6379
+    database: 0
+
+  rabbitmq:
+    host: 123.56.142.9
+    port: 5672
+    username: guest
+    password: guest
+
+# mybatis-plus 配置
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
