@@ -1,0 +1,33 @@
+#################################### common config : ####################################
+server:
+  port: 8621
+
+
+
+spring:
+  application:
+    name: lina
+
+  datasource:
+    name: lina
+    url: jdbc:mysql://123.56.142.9:3306/snh?useUnicode=true&characterEncoding=UTF-8&ssl=false&allowMultiQueries=true
+    username: root
+    password: pass
+    hikari:
+      maximum-pool-size: 30
+      minimum-idle: 5
+
+
+
+minio:
+  endpoint: http://123.56.142.9
+  port: 9000
+  accessKey: minioadmin
+  secretKey: minioadmin
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: is_delete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
